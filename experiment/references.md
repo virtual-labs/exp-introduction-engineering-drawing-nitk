@@ -7,6 +7,7 @@
     <td>
     <ol>
     <li><a href="https://nptel.ac.in/courses/112/103/112103019/">https://nptel.ac.in/courses/112/103/112103019/</a></li>
+    <li>Engineering Drawing by N.D Bhatt</li>
     </ol>
    </td>
     <td>Developer : Dr. K V Gangadharan | NITK</br></br>
@@ -18,8 +19,8 @@
     <li>Rohit Kushwaha | NITK</li>
     <li>Akshaya | NITK</li>
     <li>Anusha B Salian | NITK</li>
-    <li>Vishwas A S| NITK</li>
-    <li>Steevan Loyd Sequeira| NITK</li>
+    <li>Vishwas A S | NITK</li>
+    <li>Steevan Loyd Sequeira | NITK</li>
     </ul></td>
   </tr>
 </table>
