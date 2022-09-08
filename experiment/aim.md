@@ -1,1 +1,1 @@
-### Aim of the experiment
+To understand how bisection and construction works
