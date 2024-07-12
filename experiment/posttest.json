@@ -10,10 +10,10 @@
         "d": "The dimensions should only be given in mm."
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (d). The dimension should be given in abbrevation mm. Not in full form that leads to congestion.",
+        "b": "The right answer is (d). The height of the dimension figures could be anything.",
+        "c": "The right answer is (d). The zero may or may not precede the decimal point when the dimension is less than unity.",
+        "d": "Correct, The right answer is (d). The dimension should be given in abbrevation mm to avoid congestion."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
@@ -27,10 +27,10 @@
         "d": "8"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (d). A smaller gap might lead to overlapping lines, making it harder to distinguish between the dimension lines and the part’s boundaries.",
+        "b": "The right answer is (d). Tight spacing could make the drawing look crowded and less professional.",
+        "c": "The right answer is (d). Smaller spacing could cause dimension lines to intersect or blend together, potentially leading to misinterpretation.",
+        "d": "Correct, The right answer is (d). Dimension line should be drawn at least 8mm away from the outlines and each other."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -44,10 +44,10 @@
         "d": "Position"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The right answer is (b). While location dimensions can indeed represent lengths (e.g., distances), they are not limited to lengths alone. They convey positional information, which may involve distances, offsets, or angles. Datum dimensions are not about specifying lengths.",
+        "b": "Correct, The right answer is (b). The location and datum dimensions can represents diameter. Location dimensions can express the distance from the center of a circular feature (such as a hole or a cylindrical surface) to an edge or another feature. Datum features (such as planes, axes, or centerlines) serve as references for tolerances related to circular features.",
+        "c": "The right answer is (b). While both location and datum dimensions can represent lengths, they are not specifically used to indicate height. Instead, they focus on positional relationships and reference points.",
+        "d": "The right answer is (b). While both location and datum dimensions can represent lengths, they are not specifically used to indicate position. Instead, they focus on positional relationships and reference points."
       },
       "correctAnswer": "b",
       "difficulty": "advanced"
@@ -61,10 +61,10 @@
         "d": "Leader line"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Correct, The right answer is (a). The dimension should be given to outline.",
+        "b": "The right answer is (a). The dimension should be given to outline. Hidden lines are used in engineering drawings to represent features that cannot be seen in a particular view but are necessary to fully define the part or assembly.",
+        "c": "The right answer is (a). The dimension should be given to outline. A centerline is a real or imaginary line that runs down the middle of something, dividing it into two equal parts. It is equidistant from the surface or sides of the object. Centerlines are commonly used in technical drawings to represent symmetry, alignment, and reference axes. ",
+        "d": "The right answer is (a). The dimension should be given to outline. Leader lines serve as visual guides that point to specific features or annotations on the drawing. They help draw attention to critical details, notes, dimensions, or labels."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -78,10 +78,10 @@
        "d": "Angled circle method"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Correct, The right answer is (a). The Inscribed circle method is used for the construction of polygon where the circle is drawn inside a polygon such that the circle is tangent to all the sides of the polygon.",
+        "b": "The right answer is (a). The outscribed circle method allows you to create a regular polygon whose vertices lie on the circumference of a given circle. But for this experiment, Inscribed circle method is used.",
+        "c": "The right answer is (a). The tangent circle method is a geometric construction technique used to create a tangent line to a given circle from an external point.",
+        "d": "The right answer is (a). The angled circle method is a technique used in engineering drawings to construct an ellipse. It allows you to create an ellipse by using concentric circles and specific angles."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
