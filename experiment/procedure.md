@@ -1,23 +1,20 @@
-1. **Select the construction** from the panel on the right side(I.e: Angle
-    bisector).
+### Procedure
 
-![](images/proc1.PNG)
+<div style="text-align:left">
+  Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" style="height:80px; width:80px;">  to view the objective of the simulation. 
 
-2. **Click on** highlighted button for the next step.
+   ![Alt text](images/objectscreen.png)
+   
+  Click on the Apparatus icon <img src="images/apparatus-icon.png" alt="Alt text" style="height:80px; width:80px;">  to check the tools required for this simulation.
 
-![](images/proc2.PNG)
+   ![Alt text](images/appratus_screen.png)
 
-3. **Click on the compass** for the next step.
+  Click on the Solution icon ,<img src="images/solutions-icon.png" alt="Alt text" style="height:80px; width:80px;">select any experiment.  
 
-![](images/proc3.PNG)
+   ![Alt text](images/solution_screen.png)
 
-4. Follow the simulator to complete the construction.
+  Click on the Next button,to proceed with further simulation steps.<img src="images/nextButtonIcon.png" alt="Alt text" style="height:80px; width:80px;">
 
-![](images/proc4.png)
+  After performing the experiment, click on the Reset button <img src="images/resetButton-icon.png" alt="Alt text" style="height:80px; width:80px;"> to restart the experiment.
 
-5. **On completion** of one, **select the other construction** and follow the
-    simulation. And complete all.
-
-![](images/proc5.PNG)
-
-6. Similarly, click **Next** to get to next step in simulation
+</div>
