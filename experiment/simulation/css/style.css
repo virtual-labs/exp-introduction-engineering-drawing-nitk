@@ -438,6 +438,9 @@ h1 {
   animation: highlight 1s infinite;
 }
 
+.anim{
+  animation: highlight 1s infinite;
+}
 .btn-group {
   display: flex;
   gap: 0.5rem;

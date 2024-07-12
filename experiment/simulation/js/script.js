@@ -111,6 +111,8 @@ btnTop.classList.add("hide");
 $(".canvas").css("display","none");
 stepTitle.textContent = "Select the Experiment:";
 btnA.classList.add('hide');
+btnA.classList.remove('anim');
+
 btnBB.classList.add('hide');
 btnC.classList.add('hide');
 btnB1.classList.add('hide');
@@ -622,6 +624,7 @@ function fun1(){
   console.log("help me go forward")
   btnA.removeAttribute("disabled");
   btnA.classList.remove('hide');
+  btnA.classList.add('anim');
   btnBB.classList.remove('hide');
   btnTop.classList.remove("hide");
 
@@ -706,8 +709,10 @@ function drawShape()
     ctx.closePath();
     console.log(cirX,"roatatew");
     btnA.setAttribute("disabled",true);
-    btnBB.removeAttribute("disabled");
+    btnA.classList.remove('anim');
 
+    btnBB.removeAttribute("disabled");
+    btnBB.classList.add('anim');
     cirX = 423;
     cirY = 215;
     cirText = "B";
@@ -725,7 +730,7 @@ img.style.transformOrigin='bottom right';
 img.style.transform = 'rotate(-60deg)';
 img.style.opacity='1';
 btnBB.setAttribute("disabled",true);
-
+btnBB.classList.remove('anim');
 setTimeout(function() {
   img.style.display = "none";
 
@@ -840,6 +845,7 @@ function re(){
       ctx.fillText("B",435,305);
       ctx.fillText("C",410,45);
 
+      btnB1.classList.add('anim');
       btnC.setAttribute("disabled",true);
       cirX = 450;
       cirY = 300;
@@ -1002,6 +1008,7 @@ function re(){
      ctx.font = "20px comic sans MS";
      ctx.beginPath();
      ctx.arc(190,300,100,-(Math.PI)/3,-(Math.PI)/8);
+     btnB1.classList.remove('anim');
 
      ctx.stroke();
      ctx.closePath();
@@ -1011,7 +1018,7 @@ function re(){
       img.style.display = "none";
 
     }, 500);
-   
+    btnC.classList.add('anim');
     btnC.removeAttribute("disabled");
     btnB1.setAttribute("disabled",true);
     cirX = 420;
@@ -1027,6 +1034,7 @@ function re(){
       ctx.arc(163,220,100,-(Math.PI)/8,(Math.PI)/8);
       ctx.stroke();
       ctx.save();
+      btnC.classList.remove('anim');
       setTimeout(function(){ 
       ctx.strokeStyle = "black";
       ctx.setLineDash([5, 3]);
@@ -1036,6 +1044,8 @@ function re(){
       ctx.stroke();
     ctx.fillText("D",400,187);
     ctx.restore();
+    btnC.classList.remove('anim');
+
       img.style.display = "none";
       $(buttonBox).css("display","none");
       img.style.transform="rotate(-5deg)";
@@ -1106,6 +1116,11 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
  btnBB.classList.add('hide');
  btnC.classList.add('hide');
  btnB1.classList.add('hide');
+
+ btnA.classList.remove('anim');
+ btnBB.classList.remove('anim');
+ btnC.classList.remove('anim');
+ btnB1.classList.remove('anim');
 $(buttonBox).css("display","none");
  btnNext.disabled = true;
 //  canvasfun1();
