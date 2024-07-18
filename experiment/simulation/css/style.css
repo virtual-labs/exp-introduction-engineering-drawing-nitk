@@ -52,7 +52,9 @@ h1 {
   );
   box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.55);
 }
-
+.box{
+  cursor: pointer;
+}
 .left-top {
   left: 1rem;
   top: 1rem;
@@ -438,9 +440,6 @@ h1 {
   animation: highlight 1s infinite;
 }
 
-.anim{
-  animation: highlight 1s infinite;
-}
 .btn-group {
   display: flex;
   gap: 0.5rem;
@@ -794,7 +793,7 @@ transform: rotate(-20deg);
   position: absolute;
    left:50%; 
    top:10%;
-    width:12%;
+    width:15%;
   opacity:1 ;
   display: none;
 
@@ -838,6 +837,22 @@ transform: rotate(-20deg);
       justify-content: center;
       gap: 1rem;
     }
+    .radioGroup {
+      display: flex;
+      align-items: center;
+  }
+  #shapeDropdown{
+    border: 2px solid var(--clr-title-background);
+    border-radius: 8%;
+    padding: 3%;
+  }
+  #shapeDropdown option{
+    background-color: var(--clr-title-background); /* Background color for options */
+            color: #fff; /* Text color for options */
+  }
+  .shapeDrop {
+      margin-left: 2%;
+  }
 @keyframes highlight {
   0% {
     transform: scale(1);

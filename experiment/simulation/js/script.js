@@ -21,30 +21,30 @@ const btnAxis = document.querySelector(".btn-axis");
 // btnAxis.addEventListener("click", drawAxis);
 const btnVPHP = document.querySelector(".btn-vp-hp");
 // btnVPHP.addEventListener("click", nameVPHP);
-const btnLine = document.querySelector(".btn-line");
-btnLine.addEventListener("click", drawInitialLine);
-const btnaDash = document.querySelector(".btn-a-dash");
-btnaDash.addEventListener("click", a);
-const btna = document.querySelector(".btn-a");
-btna.addEventListener("click", b);
-const btnbOneDash = document.querySelector(".btn-b-one-dash");
-btnbOneDash.addEventListener("click", b11);
-const btnThetaOne = document.querySelector(".btn-theta-one");
-btnThetaOne.addEventListener("click", b1);
-const btnB = document.querySelector(".btn-b");
-btnB.addEventListener("click", bb);
-const btnBOne = document.querySelector(".btn-b-one");
-btnBOne.addEventListener("click", b2);
-const btnThetaTwo = document.querySelector(".btn-theta-two");
-btnThetaTwo.addEventListener("click", b22);
-const btnBDash = document.querySelector(".btn-b-dash");
-btnBDash.addEventListener("click", bbb);
-const btnTrace = document.querySelector(".btn-trace");
-btnTrace.addEventListener("click", hhhh);
-const btnH = document.querySelector(".btn-h");
-btnH.addEventListener("click", ha);
-const btnV = document.querySelector(".btn-v");
-btnV.addEventListener("click", v);
+// const btnLine = document.querySelector(".btn-line");
+// btnLine.addEventListener("click", drawInitialLine);
+// const btnaDash = document.querySelector(".btn-a-dash");
+// btnaDash.addEventListener("click", a);
+// const btna = document.querySelector(".btn-a");
+// btna.addEventListener("click", b);
+// const btnbOneDash = document.querySelector(".btn-b-one-dash");
+// btnbOneDash.addEventListener("click", b11);
+// const btnThetaOne = document.querySelector(".btn-theta-one");
+// btnThetaOne.addEventListener("click", b1);
+// const btnB = document.querySelector(".btn-b");
+// btnB.addEventListener("click", bb);
+// const btnBOne = document.querySelector(".btn-b-one");
+// btnBOne.addEventListener("click", b2);
+// const btnThetaTwo = document.querySelector(".btn-theta-two");
+// btnThetaTwo.addEventListener("click", b22);
+// const btnBDash = document.querySelector(".btn-b-dash");
+// btnBDash.addEventListener("click", bbb);
+// const btnTrace = document.querySelector(".btn-trace");
+// btnTrace.addEventListener("click", hhhh);
+// const btnH = document.querySelector(".btn-h");
+// btnH.addEventListener("click", ha);
+// const btnV = document.querySelector(".btn-v");
+// btnV.addEventListener("click", v);
 
 const btnA = document.querySelector('.btn-A');
 
@@ -60,22 +60,36 @@ const buttonBox = document.querySelector(".practice-step-button");
 
 const box = document.querySelector(".box");
 
+const dropDown = document.querySelector('.shapeDrop');
+
+
 const radioButtons = document.querySelectorAll('input[name="navigation"]');
 
 
-// Add event listeners to radio buttons
+
 radioButtons.forEach(function(radio) {
   radio.addEventListener('change', function() {
     btnNext.disabled = false;
-  });
+    console.log(radio.value);
+    if (radio.value === 'third') {
+      console.log("radio visible")
+      dropDown.classList.remove('hide');
+  } else {
+    console.log("radio non visible")
+
+    dropDown.classList.add('hide');
+  }
+  }); 
+
 });
-// btnNext.addEventListener("click", nextStep);
+
 const btnReset = document.querySelector(".btn-reset");
 btnReset.addEventListener("click", clearcanvas);
 const btnTop = document.querySelector(".btn-top");
 btnTop.addEventListener("click", movetoTop);
 const validateAnswer = document.createElement("span");
 validateAnswer.classList.add("validate");
+
 
 function displayDiv(ele) {
   const taskScreen = document.querySelectorAll(".task-screen");
@@ -90,29 +104,24 @@ function displayDiv(ele) {
   }
   if (ele.classList.contains("tool-practice")) {
     document.querySelector(".practice").classList.remove("hide");
-// $(".tool-practice").css("pointerEvents","auto");
+
+
 btnTop.classList.add("hide");
 
     console.log("reched here")
     quizDiv.classList.remove('hide');
     btnNext.addEventListener('click', nextButtonEventListener);
-    // radio.checked = false;
-
+  
     radioButtons.forEach(radio => {
       radio.checked = false;
+    
   })
 
-    if (animationFrameID) {
-      cancelAnimationFrame(animationFrameID);
-      animationFrameID = null;
-  }
   circle1 = new Path2D();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 $(".canvas").css("display","none");
 stepTitle.textContent = "Select the Experiment:";
 btnA.classList.add('hide');
-btnA.classList.remove('anim');
-
 btnBB.classList.add('hide');
 btnC.classList.add('hide');
 btnB1.classList.add('hide');
@@ -125,18 +134,18 @@ document.getElementById("image").style.display = "none";
 document.getElementById("image1").style.display = "none";
 document.getElementById("image3").style.display = "none";
 
-btnNext.removeEventListener('click',roti);
+btnNext.removeEventListener('click',handleDropdownChange);
 btnNext.addEventListener('click', nextButtonEventListener);
 //  clearcanvas();
   }
 }
-// const submitBtn = document.getElementById('submitBtn');
 
 let fun3Executed = false; // Flag to check if fun3 has been executed
 
+let canExecute = false;
 
 
-// Add click event listener to the Next button
+
 let nextButtonEventListener = function() {
   const option1 = document.getElementById('1').checked;
   const option2 = document.getElementById('2').checked;
@@ -160,6 +169,8 @@ let nextButtonEventListener = function() {
     stepTitle.innerHTML = "<strong>Learn how to bisect an angle</strong>";
     fun2();
   } else if (option3) {
+    // dropdownContainer.style.display = 'block';
+    // $(dropdownContainer).css("display", "block");
     quizDiv.classList.add('hide');
     $(".canvas").css("display", "block");
     buttonBox.classList.remove('hide');
@@ -167,64 +178,31 @@ let nextButtonEventListener = function() {
     console.log("Reached here");
     stepTitle.innerHTML = "<strong>Learn how to draw a polygon</strong>";
     fun3();
+
     fun3Executed = true; // Set the flag to true after fun3 is executed
     btnNext.removeEventListener('click', nextButtonEventListener);
-    btnNext.addEventListener('click', roti) 
+    btnNext.addEventListener('click', handleDropdownChange); 
   }
 };
 
 btnNext.addEventListener('click', nextButtonEventListener);
-// function nextStep() {
-//   currentStep = data.find((step) => currentStepCount === step.step);
-//   stepNumber.textContent = currentStepCount;
-//   stepTitle.textContent = currentStep.title;
-//   btnNext.setAttribute("disabled", true);
-//   btnNext.classList.remove("blink");
-//   initialSetup();
-//   console.log(step.step);
-// }
 
-// function nextQuestion() {
-//   if (currentQuestionIndex < currentQuestions.length - 1) {
-//     currentQuestionIndex += 1;
-//     displayQuestionDiv(currentQuestions[currentQuestionIndex]);
-//   } else {
-//     quizDiv.classList.add("hide");
-//     if (currentStepCount === data.length) {
-//       stepNumber.classList.add("hide");
-//       stepTitle.classList.add("hide");
-//       document.querySelector(".final-statement").classList.remove("hide");
-//       btnNext.classList.add("hide");
-//       btnNext.classList.remove("blink");
-//     } else {
-//       currentStepCount += 1;
-//       btnNext.removeAttribute("disabled");
-//       btnNext.classList.add("blink");
-//     }
-//   }
-// }
-// function drawAxis() {
-//   canvas.classList.remove("hide");
-//   canvas.scrollIntoView();
-//   btnTop.classList.remove("hide");
-//   ctx.strokeStyle = "#B9B6B1";
-//   animate(50, 250, 650, 250, 0, nameAxis);
-// }
+function handleDropdownChange() {
+  const selectedShape = document.getElementById('shapeDropdown').value;
 
-// function nameAxis() {
-//   ctx.font = "bold 20px Nunito sans MS";
-//   ctx.fillText("X", 30, 255);
-//   ctx.fillText("Y", 670, 255);
-//   btnAxis.classList.add("hide");
-//   nextQuestion();
-// }
 
-// function nameVPHP() {
-//   ctx.fillText("HP", 69, 243);
-//   ctx.fillText("VP", 69, 270);
-//   btnVPHP.classList.add("hide");
-//   nextQuestion();
-// }
+  if (selectedShape === 'hexagon') {
+    console.log("hexagon");
+    
+     roti();
+  } else if (selectedShape === 'pentagon') {
+    console.log("pentagon");
+
+      roti1();
+  }
+
+}
+
 
 function drawLine(x1, y1, x2, y2, ratio) {
   ctx.beginPath();
@@ -236,18 +214,7 @@ function drawLine(x1, y1, x2, y2, ratio) {
   ctx.stroke();
 }
 
-// function animate(x1, y1, x2, y2, ratio, cb) {
-//   ratio = ratio || 0;
-//   drawLine(x1, y1, x2, y2, ratio, cb);
-//   if (ratio > 1) {
-//     cb();
-//   } else if (ratio < 1) {
-//     animationStatus = true;
-//     requestAnimationFrame(function () {
-//       animate(x1, y1, x2, y2, ratio + 0.02, cb);
-//     });
-//   }
-// }
+
 function animate(x1, y1, x2, y2, ratio) {
   ratio = ratio || 0;
   drawLine(x1, y1, x2, y2, ratio);
@@ -258,72 +225,9 @@ function animate(x1, y1, x2, y2, ratio) {
   }
 }
 
-// function animateRecursively(x1, y1, x2, y2, ratio) {
-//   ratio = ratio || 0;
-//   drawLine(x1, y1, x2, y2, ratio);
-//   if (ratio < 1) {
-//     animationStatus = true;
-//     requestAnimationFrame(function () {
-//       animateRecursively(x1, y1, x2, y2, ratio + 0.02);
-//     });
-//   }
-// }
 
-// function initialSetup() {
-//   currentStep = data.find((d) => d.step == currentStepCount);
-//   stepNumber.textContent = currentStepCount;
-//   stepTitle.textContent = currentStep.title;
-//   currentQuestions = currentStep.questions;
-//   currentQuestionIndex = 0;
-//   quizDiv.classList.remove("hide");
 
-//   displayQuestionDiv(currentQuestions[currentQuestionIndex]);
-// }
 
-// function displayQuestionDiv(questions) {
-//   console.log(currentStep, currentQuestions[currentQuestionIndex]);
-//   const { question, options, answer, buttonClass, circle, circleText } =
-//     questions;
-//   questionDiv.innerHTML = `${currentQuestionIndex + 1}. ${question}`;
-//   answersDiv.innerHTML = "";
-//   options.map((option, index) => {
-//     answersDiv.innerHTML += `
-//     <div class="input-group">
-//     <input type="radio" name="${question}" id="ans${index}" class="option" onchange='checkAnswer(this, ${index}, ${answer}, ${buttonClass},${JSON.stringify(
-//       circle
-//     )})'>
-//     <label for="rad1">${option.text}</label>
-//     </div>
-//     `;
-//   });
-//   console.log(JSON.stringify(circle));
-// }
-
-// function checkAnswer(ele, index, answer, buttonClass, circle) {
-//   const optionSelected = ele.parentNode;
-//   optionSelected.classList.remove("wrong");
-//   optionSelected.classList.remove("correct");
-//   if (index === answer) {
-//     optionSelected.classList.add("correct");
-//     validateAnswer.innerHTML = "Right answer👍";
-//     answersDiv.appendChild(validateAnswer);
-//     if (buttonClass != null) buttonClass.classList.remove("hide");
-//     if (circle) {
-//       cirX = circle.x;
-//       cirY = circle.y;
-//       cirText = currentQuestions[currentQuestionIndex].circleText;
-//       currentFunction = currentQuestions[currentQuestionIndex].func;
-//       createCircle();
-//     }
-//   } else {
-//     clearCircle();
-//     optionSelected.classList.add("wrong");
-//     if (buttonClass != null) buttonClass.classList.add("hide");
-//     validateAnswer.innerHTML = "Worng answer, please check the options again👎";
-//     answersDiv.appendChild(validateAnswer);
-//   }
-//   console.log
-// }
 function ciRest(){
   cirX = 0;
   cirY = 0;
@@ -391,203 +295,8 @@ function drawInitialLine() {
   nextQuestion();
 }
 
-function a() {
-  ctx.beginPath();
-  ctx.setLineDash([]);
-  ctx.moveTo(300, 200);
-  ctx.lineTo(406, 94);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(300, 200, 40, -Math.PI / 4, 0);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.setLineDash([10, 3]);
-  ctx.moveTo(230, 94);
-  ctx.lineTo(486, 94);
-  ctx.stroke();
-  ctx.fillStyle = "#000";
-  ctx.fillText("b1'", 406, 70);
-  ctx.fillText("θ", 337, 185);
-  ctx.fillText("Locus of a", 500, 190);
-  ctx.fillText("Locus of b'", 500, 93);
-  clearCircle();
-  ctx.closePath();
-  btnaDash.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
 
-function b() {
-  ctx.beginPath();
-  ctx.setLineDash([]);
-  ctx.moveTo(300, 300);
-  ctx.lineTo(430, 375);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(300, 300, 40, 0, Math.PI / 6);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.setLineDash([10, 3]);
-  ctx.moveTo(230, 375);
-  ctx.lineTo(486, 375);
-  ctx.stroke();
-  clearCircle();
-  ctx.fillText("ϕ", 340, 320);
-  ctx.fillText("b1", 410, 400);
-  ctx.fillText("Locus of a'", 500, 295);
-  ctx.fillText("Locus of b", 500, 370);
-  ctx.closePath();
-  btna.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
 
-function b11() {
-  ctx.beginPath();
-  ctx.setLineDash([]);
-  ctx.moveTo(406, 94);
-  ctx.lineTo(406, 300);
-  ctx.stroke();
-  clearCircle();
-  ctx.closePath();
-  btnbOneDash.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-
-function b1() {
-  ctx.beginPath();
-  ctx.arc(300, 300, 106, 0, Math.PI / 4);
-  ctx.stroke();
-  clearCircle();
-  ctx.fillText("b", 370, 400);
-  ctx.closePath();
-  btnThetaOne.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-
-function bb() {
-  ctx.beginPath();
-  ctx.strokeStyle = "green";
-  ctx.strokeWidth = "2";
-  ctx.moveTo(300, 300);
-  ctx.lineTo(375, 375);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.strokeStyle = "black";
-  ctx.arc(300, 300, 55, 0, Math.PI / 4);
-  ctx.stroke();
-  clearCircle();
-  ctx.fillText("β", 360, 328);
-  ctx.closePath();
-  btnB.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-function b2() {
-  ctx.beginPath();
-  ctx.strokeStyle = "black";
-  ctx.setLineDash([]);
-  ctx.moveTo(430, 375);
-  ctx.lineTo(430, 200);
-  ctx.stroke();
-  clearCircle();
-  ctx.closePath();
-  btnBOne.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-
-function b22() {
-  ctx.beginPath();
-  ctx.arc(300, 200, 130, -Math.PI / 3.27, 0);
-  ctx.stroke();
-  clearCircle();
-  ctx.font = "14px comic sans MS";
-  ctx.fillText("b'", 370, 80);
-  ctx.closePath();
-  btnThetaTwo.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-function bbb() {
-  ctx.beginPath();
-  ctx.strokeStyle = "#FF0000";
-  ctx.moveTo(300, 200);
-  ctx.lineTo(375, 94);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.strokeStyle = "black";
-  ctx.arc(300, 200, 55, -Math.PI / 3.19, 0);
-  ctx.stroke();
-  clearCircle();
-  ctx.fillText("α", 350, 170);
-  ctx.closePath();
-  btnBDash.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-
-function hhhh() {
-  ctx.beginPath();
-  ctx.arc(265, 250, 3, 0, 2 * Math.PI, false);
-  ctx.fill();
-  ctx.moveTo(300, 200);
-  ctx.lineTo(250, 271);
-  ctx.stroke();
-  ctx.closePath();
-  ctx.font = "14px comic sans MS";
-  ctx.fillText("h", 285, 240);
-  btnTrace.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-
-function ha() {
-  ctx.beginPath();
-  ctx.arc(250, 250, 3, 0, 2 * Math.PI, false);
-  ctx.fill();
-  ctx.moveTo(300, 300);
-  ctx.lineTo(250, 250);
-  ctx.stroke();
-  ctx.font = "14px comic sans MS";
-  ctx.fillText("v", 230, 240);
-  ctx.closePath();
-  btnH.classList.add("hide");
-  circle1 = new Path2D();
-  nextQuestion();
-}
-function v() {
-  ctx.beginPath();
-  ctx.arc(250, 271, 3, 0, 2 * Math.PI, false);
-  ctx.fill();
-  ctx.moveTo(250, 271);
-  ctx.lineTo(250, 250);
-  ctx.stroke();
-  ctx.closePath();
-  ctx.beginPath();
-  ctx.moveTo(250, 93);
-  ctx.lineTo(250, 370);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(265, 265, 3, 0, 2 * Math.PI, false);
-  ctx.fill();
-  ctx.moveTo(265, 250);
-  ctx.lineTo(265, 265);
-  ctx.closePath();
-  ctx.beginPath();
-  ctx.moveTo(265, 93);
-  ctx.lineTo(265, 370);
-  ctx.stroke();
-  btnV.classList.add("hide");
-  circle1 = new Path2D();
-  ctx.font = "14px comic sans MS";
-  ctx.fillText("HT", 220, 270);
-  ctx.fillText("VT", 275, 270);
-  ctx.closePath();
-  nextQuestion();
-}
 
 function createCircle() {
   console.log(cirText);
@@ -624,7 +333,6 @@ function fun1(){
   console.log("help me go forward")
   btnA.removeAttribute("disabled");
   btnA.classList.remove('hide');
-  btnA.classList.add('anim');
   btnBB.classList.remove('hide');
   btnTop.classList.remove("hide");
 
@@ -709,10 +417,8 @@ function drawShape()
     ctx.closePath();
     console.log(cirX,"roatatew");
     btnA.setAttribute("disabled",true);
-    btnA.classList.remove('anim');
-
     btnBB.removeAttribute("disabled");
-    btnBB.classList.add('anim');
+
     cirX = 423;
     cirY = 215;
     cirText = "B";
@@ -730,7 +436,7 @@ img.style.transformOrigin='bottom right';
 img.style.transform = 'rotate(-60deg)';
 img.style.opacity='1';
 btnBB.setAttribute("disabled",true);
-btnBB.classList.remove('anim');
+
 setTimeout(function() {
   img.style.display = "none";
 
@@ -845,7 +551,6 @@ function re(){
       ctx.fillText("B",435,305);
       ctx.fillText("C",410,45);
 
-      btnB1.classList.add('anim');
       btnC.setAttribute("disabled",true);
       cirX = 450;
       cirY = 300;
@@ -978,6 +683,7 @@ function re(){
                 ctx.lineWidth=2;
                 stepNumber.textContent = "10";
                 stepTitle.innerHTML = "Join the vertices to complete the Polygon";
+                btnNext.setAttribute('disabled',true);
                 // document.getElementById("text").innerHTML="Join the vertices to complete the Polygon";
                 // document.getElementById("stepnumber").innerHTML="&nbsp;9&nbsp;";
                 animate(201,214,301-100*Math.cos(Math.PI/3),214-100*Math.sin(Math.PI/3));
@@ -993,6 +699,115 @@ function re(){
            
               console.log(i); 
        }
+       var p=0;
+       function roti1() {
+        if (p == 0) {
+            ctx.beginPath();
+            ctx.font = 'bold 20px comic sans MS';
+            ctx.arc(300 - 50, 400 - 100, 100, Math.PI, 0);
+            ctx.stroke();
+            ctx.beginPath();
+        
+            stepNumber.textContent = "2";
+            stepTitle.innerHTML = "Draw a semicircle with <b>AB</b> as diameter";
+            ctx.closePath();
+        } else if (p == 1) { 
+             ctx.beginPath();
+            ctx.arc(169,241, 3, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.moveTo(219, 204);
+            ctx.arc(219,204, 3, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+            ctx.beginPath();
+              ctx.moveTo(280, 204);
+            ctx.arc(280, 204, 3, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+            ctx.beginPath();
+             ctx.moveTo(330, 241);
+            ctx.arc(330, 241, 3, 0, 2 * Math.PI);
+            
+            ctx.fill();
+      
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(250, 300);
+           ctx.arc(250, 300, 3, 0, 2 * Math.PI);
+           
+           ctx.fill();
+     
+           ctx.closePath();
+            stepNumber.textContent = "3";
+            stepTitle.innerHTML = "For n sided, divide the semicircle in n parts";
+        } else if (p == 2) {
+            ctx.beginPath();
+            ctx.moveTo(201, 150);
+            ctx.lineTo(250, 300);
+         
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(313, 100);
+            ctx.lineTo(250, 300);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(385, 200);
+            ctx.lineTo(250, 300);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.fillText("D", 190, 203);
+            ctx.fillText("E", 260, 195);
+            ctx.fillText("F", 330, 233);
+            ctx.fillText("O", 250, 320);
+            stepNumber.textContent = "4";
+            stepTitle.innerHTML = "Join the center to three parts of the semi-circle";
+        } else if (p == 3) {
+            ctx.beginPath();
+            ctx.arc(350, 300, 100,-Math.PI / 2.2, -Math.PI / 2.7);
+            ctx.stroke();
+            ctx.closePath();
+            stepNumber.textContent = "5";
+            stepTitle.innerHTML = "Using <b>OB</b> as the radius, draw an arc from <b>B</b> that intersects the extention of <b>OF</b>";
+        }
+        
+   
+         else if (p == 4) {
+            ctx.beginPath();
+            ctx.arc(219, 204, 100,315 * Math.PI / 180, 330 * Math.PI / 180);           
+                 ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(313, 150);
+            ctx.arc(299, 144, 2, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+
+            stepNumber.textContent = "6";
+            stepTitle.innerHTML = "Using <b>OB</b> as radius, draw an arc from <b>D</b> that intersects the extention of <b>OE</b>";
+        } 
+      
+         else {
+            ctx.strokeStyle = "#000080";
+            ctx.lineWidth = 2;
+            stepNumber.textContent = "7";
+            stepTitle.innerHTML = "Join the vertices to complete the Polygon";
+            btnNext.setAttribute('disabled',true);
+            animate(299, 144, 269 - 100 * Math.cos(Math.PI / 3), 291 - 100 * Math.sin(Math.PI / 3));
+            animate(299, 144, 329 + 100 * Math.cos(Math.PI / 3), 291 - 100 * Math.sin(Math.PI / 3));
+            // animate(301 - 100 * Math.cos(Math.PI / 3), 214 - 100 * Math.sin(Math.PI / 3), 301 + 100 * Math.cos(Math.PI / 3), 214 - 100 * Math.sin(Math.PI / 3));
+            animate(379, 204, 301 + 100 * Math.sin(Math.PI / 6), 214 + 100 * Math.cos(Math.PI / 6));// right side
+            animate(301 + 100 * Math.sin(Math.PI / 6), 214 + 100 * Math.cos(Math.PI / 6), 201 + 100 * Math.sin(Math.PI / 6), 214 + 100 * Math.cos(Math.PI / 6));
+            animate(201 + 100 * Math.sin(Math.PI / 6), 214 + 100 * Math.cos(Math.PI / 6), 219, 204); // left side
+            console.log("laststep", p);
+        }
+        p++;
+        console.log(p);
+    }
+
+
+
  var j=0;
  function rotateimagea()
  {
@@ -1008,7 +823,6 @@ function re(){
      ctx.font = "20px comic sans MS";
      ctx.beginPath();
      ctx.arc(190,300,100,-(Math.PI)/3,-(Math.PI)/8);
-     btnB1.classList.remove('anim');
 
      ctx.stroke();
      ctx.closePath();
@@ -1018,7 +832,7 @@ function re(){
       img.style.display = "none";
 
     }, 500);
-    btnC.classList.add('anim');
+   
     btnC.removeAttribute("disabled");
     btnB1.setAttribute("disabled",true);
     cirX = 420;
@@ -1034,7 +848,6 @@ function re(){
       ctx.arc(163,220,100,-(Math.PI)/8,(Math.PI)/8);
       ctx.stroke();
       ctx.save();
-      btnC.classList.remove('anim');
       setTimeout(function(){ 
       ctx.strokeStyle = "black";
       ctx.setLineDash([5, 3]);
@@ -1044,8 +857,6 @@ function re(){
       ctx.stroke();
     ctx.fillText("D",400,187);
     ctx.restore();
-    btnC.classList.remove('anim');
-
       img.style.display = "none";
       $(buttonBox).css("display","none");
       img.style.transform="rotate(-5deg)";
@@ -1062,8 +873,8 @@ function re(){
     var img =document.getElementById('image3');
     img.style.display = "block";
     // document.getElementById('blick2').style.visibility="hidden";
-    img.style.left="35%";
-    img.style.top="44%";
+    img.style.left="34.5%";
+    img.style.top="43%";
     clearCircle();
     circle1 = new Path2D();
 
@@ -1072,8 +883,8 @@ function re(){
  {     var img = document.getElementById('image3');
       //  document.getElementById('blick6').style.visibility="hidden";    
        img.style.display = "block";
-       img.style.left="31%";
-       img.style.top="27%";
+       img.style.left="30%";
+       img.style.top="23%";
        img.style.transform="rotate(-20deg)";
        clearCircle();
        circle1 = new Path2D();
@@ -1093,9 +904,12 @@ function re(){
   ctx.fillText("B",360,305);
 
   i=0;
+  p=0;
  }
  function clearcanvas()
  {
+  document.getElementById('shapeDropdown').selectedIndex = 0;
+  dropDown.classList.add('hide');
   btnTop.classList.add("hide");
   $(".tool-practice").css("pointerEvents","auto");
   btnNext.addEventListener('click', nextButtonEventListener);
@@ -1111,16 +925,12 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
     radio.checked = false;
 });
 
+p=0;
  stepTitle.textContent = "Select the Experiment:";
  btnA.classList.add('hide');
  btnBB.classList.add('hide');
  btnC.classList.add('hide');
  btnB1.classList.add('hide');
-
- btnA.classList.remove('anim');
- btnBB.classList.remove('anim');
- btnC.classList.remove('anim');
- btnB1.classList.remove('anim');
 $(buttonBox).css("display","none");
  btnNext.disabled = true;
 //  canvasfun1();
@@ -1130,12 +940,12 @@ $(buttonBox).css("display","none");
  document.getElementById("image1").style.display = "none";
  document.getElementById("image3").style.display = "none";
 
-btnNext.removeEventListener('click',roti);
+btnNext.removeEventListener('click',handleDropdownChange);
 btnNext.addEventListener('click', nextButtonEventListener);
 console.log("clearcavas")
 circle1 = new Path2D();
  }
- 
+    var p;
     var i;
     var w=0;
 /*
