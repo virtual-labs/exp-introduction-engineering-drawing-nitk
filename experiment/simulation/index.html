@@ -83,19 +83,7 @@
                 <p class="objective__main">To learn how to bisect a line, to bisect an angle, to make a geometric construction of a polygon
 
                 </p>
-                <!-- <div class="objective__main">To draw projections of Line inclined with both VP and HP and trace it.
-                  <ol class="objective__list">
-                    <li>True Length (TL) - a'b<sub>1</sub>' and ab<sub>1</sub></li>
-                    <li>Apparent Length (AL) - a'b' and ab</li>
-                    <li>Angle of TL with HP - &theta;</li>
-                    <li>Angle of TL with VP – &phi;</li>
-                    <li>Angle of FV with xy – &alpha;</li>
-                    <li>Angle of TV with xy – &beta;</li>
-                    <li>Position of A- Distances of a & a’ from xy</li>
-                    <li>Position of B- Distances of b & b’ from xy</li> 
-                    <li>h, HT - Horizontal Trace</li>   
-                    <li>v, VT - Vertical Trace</li>    
-                 </ol></div> -->
+               
                 
               </div>
               <div class="task-screen apparatus hide">
@@ -106,7 +94,7 @@
                     <span>Compass</span>
                   </div>
                   <div class="apparatus-tool">
-                    <img src="./images/Drafter.jpeg" alt="drafter" class="tool-img">
+                    <img src="./images/drafter.jpeg" alt="drafter" class="tool-img">
                     <span>Drafter</span>
                   </div>
                   <div class="apparatus-tool">
@@ -139,8 +127,18 @@
                     <label for="1" class="radio">To bisect a line</label></br></br>
                 <input type="radio" id="2" name="navigation" value="2" >
                     <label for="2" class="radio">To bisect an angle</label></br></br>
-                <input type="radio" id="3" name="navigation" value="3" >
-                    <label for="3" class="radio">Geometric Construction</label>       
+               
+                    <div class="radioGroup">
+                      <input type="radio" id="3" name="navigation" value="third">
+                      <label for="3" class="radio">Geometric Construction</label>  
+                      <div id="shapeDropdownContainer" class="shapeDrop hide" >
+                          <select id="shapeDropdown" >
+                              <option value="hexagon" selected>Hexagon</option>
+                              <option value="pentagon">Pentagon</option>
+                          </select>
+                      </div> 
+                  </div>
+         
                 </form>
                  
                   <div  class="answers">
@@ -169,18 +167,14 @@
                 <div class="simscreen1">
                 <canvas id="simscreen" width="550" height="400" class="canvas hide"></canvas>
             
-                <img class="box" onclick=rotateimage()  id="image" src="./images/Design1.png">
-                 <img class="box" onclick=rotateimage1()  id="image1" src="./images/Design.png">
+                <img class="box" onclick=rotateimage() title="Click Here!" id="image" src="./images/Design1.png">
+                 <img class="box" onclick=rotateimage1() title="Click Here!" id="image1" src="./images/Design.png">
                
 
-                   <img class="box" onclick=rotateimagea()  id="image3" src="./images/Design1.png">
+                   <img class="box" onclick=rotateimagea() title="Click Here!" id="image3" src="./images/Design1.png">
 
               </div>
-              <!-- <div class="simscreen-2">
-                <canvas id="simscreen1" width="750" height="500" class="canvas  hide"></canvas>
-
-
-              </div> -->
+           
                 <button class="draw-btn btn-a-1 hide disabled">a'</button>
                  
                 <button class="btn btn-top hide" title="Move to Top">↑</button>
