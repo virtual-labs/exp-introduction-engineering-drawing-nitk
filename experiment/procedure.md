@@ -1,20 +1,22 @@
 ### Procedure
 
-<div style="text-align:left">
-  Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" style="height:80px; width:80px;">  to view the objective of the simulation. 
 
-   ![Alt text](images/objectscreen.png)
+1. Click on the Objective icon <img src="images/objecticon.png" alt="Alt text" >  to view the objective of the simulation. 
+
+    ![Alt text](images/objectscreen.png)
    
-  Click on the Apparatus icon <img src="images/apparatus-icon.png" alt="Alt text" style="height:80px; width:80px;">  to check the tools required for this simulation.
+2. Click on the Apparatus icon <img src="images/apparatus-icon.png" alt="Alt text" >  to check the tools required for this simulation.
 
-   ![Alt text](images/appratus_screen.png)
+    ![Alt text](images/appratus_screen.png)
 
-  Click on the Solution icon ,<img src="images/solutions-icon.png" alt="Alt text" style="height:80px; width:80px;">select any experiment.  
+3. Click on the Solution icon ,<img src="images/solutions-icon.png" alt="Alt text" >select any experiment.  
 
-   ![Alt text](images/solution_screen.png)
+    ![Alt text](images/solution_screen.png)
 
-  Click on the Next button,to proceed with further simulation steps.<img src="images/nextButtonIcon.png" alt="Alt text" style="height:80px; width:80px;">
+4. Click on the Next button,to proceed with further simulation steps.<img src="images\nextButton-icon.png" alt="Alt text">
 
-  After performing the experiment, click on the Reset button <img src="images/resetButton-icon.png" alt="Alt text" style="height:80px; width:80px;"> to restart the experiment.
+    ![Alt text](images/solution1.png)
 
-</div>
+5. After performing the experiment, click on the Reset button <img src="images/resetButton-icon.png" alt="Alt text" > to restart the experiment.
+
+

@@ -65,11 +65,15 @@ const dropDown = document.querySelector('.shapeDrop');
 
 const radioButtons = document.querySelectorAll('input[name="navigation"]');
 
+const taskTitle = document.querySelector(".task-title");
 
+// radioButtons.style.cursor= "pointer";
 
 radioButtons.forEach(function(radio) {
+ 
   radio.addEventListener('change', function() {
     btnNext.disabled = false;
+    btnReset.disabled = false;
     console.log(radio.value);
     if (radio.value === 'third') {
       console.log("radio visible")
@@ -98,14 +102,17 @@ function displayDiv(ele) {
   });
   if (ele.classList.contains("tool-objective")) {
     document.querySelector(".objective").classList.remove("hide");
+    taskTitle.textContent = "Objective";
   }
   if (ele.classList.contains("tool-apparatus")) {
     document.querySelector(".apparatus").classList.remove("hide");
+    taskTitle.textContent = "Apparatus";
   }
   if (ele.classList.contains("tool-practice")) {
     document.querySelector(".practice").classList.remove("hide");
-
-
+    taskTitle.textContent = "Solution";
+    $(stepTitle).css("margin-left","5rem");
+    stepNumber.classList.add('hide');
 btnTop.classList.add("hide");
 
     console.log("reched here")
@@ -118,7 +125,7 @@ btnTop.classList.add("hide");
   })
 
   circle1 = new Path2D();
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
 $(".canvas").css("display","none");
 stepTitle.textContent = "Select the Experiment:";
 btnA.classList.add('hide');
@@ -157,8 +164,10 @@ let nextButtonEventListener = function() {
   
     // buttonBox.classList.remove('hide');
     btnNext.disabled = true;
+    $(stepTitle).css("margin-left","0");
     stepTitle.innerHTML = "<strong>Learn how to bisect a line</strong>";
     console.log("Reached here");
+    stepNumber.classList.remove('hide');
     // btnReset.setAttribute("disabled",true);
     fun1();
   } else if (option2) {
@@ -167,6 +176,10 @@ let nextButtonEventListener = function() {
     buttonBox.classList.remove('hide');
     btnNext.disabled = true;
     stepTitle.innerHTML = "<strong>Learn how to bisect an angle</strong>";
+    stepNumber.classList.remove('hide');
+    $(stepTitle).css("margin-left","0");
+
+
     fun2();
   } else if (option3) {
     // dropdownContainer.style.display = 'block';
@@ -177,6 +190,10 @@ let nextButtonEventListener = function() {
     btnNext.disabled = true;
     console.log("Reached here");
     stepTitle.innerHTML = "<strong>Learn how to draw a polygon</strong>";
+    stepNumber.classList.remove('hide');
+    $(stepTitle).css("margin-left","0");
+
+
     fun3();
 
     fun3Executed = true; // Set the flag to true after fun3 is executed
@@ -234,6 +251,7 @@ function ciRest(){
 
 }
 function resetAll() {
+  btnReset.disabled = true;
   ctx.clearRect(0, 0, 750, 500);
   ctx.setLineDash([]);
   currentStepCount = 1;
@@ -248,6 +266,7 @@ function resetAll() {
   initialSetup();
   document.querySelectorAll(".btn").forEach((b) => b.classList.add("hide"));
   btnNext.setAttribute("disabled", true);
+  btnReset.setAttribute("disabled", true);
   btnNext.classList.remove("hide");
   btnReset.classList.remove("hide");
   stepNumber.classList.remove("hide");
@@ -415,6 +434,8 @@ function drawShape()
     ctx.arc(150, 192, 130, -(Math.PI/5), Math.PI/5);
     ctx.stroke();
     ctx.closePath();
+    // ctx.fill();
+
     console.log(cirX,"roatatew");
     btnA.setAttribute("disabled",true);
     btnBB.removeAttribute("disabled");
@@ -508,6 +529,9 @@ function re(){
  {
   clearCircle();
   circle1 = new Path2D();
+  ctx.fillStyle = "black"; // or any other color
+  ctx.font = "bold 15px nunito,sans-serif ";
+  ctx.fillText("Note: Click on the compass to draw an arc", 130, 20);
   // ctx.beginPath();
   // ctx.fill();
   // ctx.fillText("A",147,220);
@@ -517,9 +541,13 @@ function re(){
 
  function visiblia()
  {
+  // ctx.clearRect(0,0,canvas.width,canvas.height);
   clearCircle();
   circle1 = new Path2D();
      document.getElementById("image1").style.display = "block";
+    //  ctx.fillStyle = "black"; // or any other color
+    //  ctx.font = "bold 20px Comic Sans MS";
+    //  ctx.fillText("Note: Click on the compass to draw an arc", 130, 190);
     //  document.getElementById("blick").style.visibility="hidden";
  }
 
@@ -563,6 +591,8 @@ function re(){
  }
  var m=0;
  function roti(){
+  console.log(canvas.width,canvas.height);
+
     // var canvas=document.getElementById("mycanvas2");
     // var ctx = canvas.getContext('2d');`
     // var img=document.getElementById("image4");
@@ -873,9 +903,12 @@ function re(){
     var img =document.getElementById('image3');
     img.style.display = "block";
     // document.getElementById('blick2').style.visibility="hidden";
-    img.style.left="34.5%";
-    img.style.top="43%";
+    img.style.left="37.5%";
+    img.style.top="42.5%";
     clearCircle();
+    ctx.fillStyle = "black"; // or any other color
+    ctx.font = "bold 15px nunito,sans-serif ";
+    ctx.fillText("Note: Click on the compass to draw an arc", 130, 20);
     circle1 = new Path2D();
 
  }
@@ -883,9 +916,10 @@ function re(){
  {     var img = document.getElementById('image3');
       //  document.getElementById('blick6').style.visibility="hidden";    
        img.style.display = "block";
-       img.style.left="30%";
-       img.style.top="23%";
+       img.style.left="34%";
+       img.style.top="22.5%";
        img.style.transform="rotate(-20deg)";
+     
        clearCircle();
        circle1 = new Path2D();
  }
@@ -911,6 +945,9 @@ function re(){
   document.getElementById('shapeDropdown').selectedIndex = 0;
   dropDown.classList.add('hide');
   btnTop.classList.add("hide");
+  stepNumber.classList.add('hide');
+  $(stepTitle).css("margin-left","5rem");
+
   $(".tool-practice").css("pointerEvents","auto");
   btnNext.addEventListener('click', nextButtonEventListener);
 
@@ -933,6 +970,7 @@ p=0;
  btnB1.classList.add('hide');
 $(buttonBox).css("display","none");
  btnNext.disabled = true;
+ btnReset.disabled = true;
 //  canvasfun1();
  console.log(i);
  stepNumber.textContent = "1";
