@@ -136,6 +136,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .tool-list span {
   display: inline-block;
@@ -342,7 +343,7 @@ h1 {
   font-style: 1.8rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 .practice-step-no {
@@ -508,9 +509,9 @@ h1 {
   align-self: center;
 }
 canvas {
-  width: auto;
-  height: auto;
-  align-self: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;;
 }
 
 .tooltip {
@@ -531,8 +532,8 @@ canvas {
 .canvas {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
 /* **********VARIABLES**************** */
@@ -659,6 +660,7 @@ canvas {
 .simscreen1{
 
   position: relative;
+
 }
 .btn-A{
 
@@ -764,9 +766,10 @@ canvas {
   transform-origin: bottom right;
   transform:rotate(30deg);
   position: absolute; 
-  left: 64.5%;
-  top: 22%;
-   width:12%;
+  left: 59%;
+  top: 15%;
+  width: 12%;
+  height: 33%;
   opacity:1 ;
   display: none;
  }
@@ -775,9 +778,10 @@ canvas {
   transform-origin: bottom left;
   transform:rotate(-30deg);
   position: absolute;
-  left: 27.5%;
-  top: 22%;
+  left: 32%;
+  top: 15%;
   width: 12%;
+  height: 33%;
   opacity:1 ;
   display: none;
 
@@ -791,12 +795,16 @@ canvas {
 -o-transform: rotate(-20deg); 
 transform: rotate(-20deg);
   position: absolute;
-   left:50%; 
-   top:10%;
-    width:15%;
+  /* left: 37.5%;
+  top: 35.2%; */
+  width: 15%;
+  height: 33%;
   opacity:1 ;
   display: none;
 
+}
+input[type="radio"] {
+  cursor: pointer;
 }
  /* #A{
         position: absolute;
