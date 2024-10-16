@@ -1,1 +1,1 @@
-To understand how bisection and construction works
+To bisect a line, bisect an angle and construct a polygon.
