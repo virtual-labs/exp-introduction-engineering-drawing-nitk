@@ -17,7 +17,7 @@ Fig 1. Drawing Board
 </center>
 
 <br>2. T- square
-A T-square as shown in Fig 2, is made up of two pieces of hard quality wood, which is fastened at rigt angles to each other. Horizontal lines are drawn by using the working edge of the drawing board.
+A T-square as shown in Fig 2, is made up of two pieces of hard quality wood, which is fastened at rigt angles to each other. Horizontal lines are drawn by using the working edge of the T-Square.
 
 <center>
 
@@ -28,7 +28,7 @@ Fig 2. T-square
 </center>
 
 <br>3. Set squares - 45<sup>o</sup> and 30<sup>o</sup> - 60<sup>o</sup>
-A set square as shown in Fig 3, is used to darw vertical lines by taking the horizontal lines drawn by T-square as the reference.
+A set square as shown in Fig 3, is used to darw vertical lines by taking the horizontal lines drawn by T-square as the reference. Set squares along with a scale can be used to draw parallel lines. 
 
 <center>
 
@@ -39,7 +39,7 @@ Fig 3. Set-Square
 </center>
 
 4. Drawing Instrument box containing:
-     <br>i. Large-size compass ith interchangable pencils and pens
+     <br>i. Large-size compass with interchangable pencils and pens
      <br>Compasses as shown in Fig 4, are used in drawing circles and arcs of circles.
 
      <center>
@@ -112,7 +112,7 @@ Fig 9. Scale
 </center>
 
 <br>6. Protractor
-A protractor as shown in Fig 10, helps n measuring angles accurately.
+A protractor as shown in Fig 10, helps in measuring and marking angles accurately.
 
 <center>
 
@@ -205,7 +205,7 @@ right-hand edges, and draw vertical lines through them by mini-drafter.
 
 3. Erase the extra lengths of lines beyond the points of intersection.
 
-4. One more horizontal line at about 10 mm to 20 mm from the bottom  border line may also be drawn and the space divided into three blocks. A  title block as shown in Fig 17 must be drawn in left-hand bottom corner  above block-3; in which 
+4. One more horizontal line at about 10 mm to 20 mm from the bottom  border line may also be drawn and the space divided into three blocks. A  title block as shown in Fig 17 must be drawn in right-hand bottom corner  above block-3; in which 
 (a) name of the institution, 
 (b) title of the drawing, and 
 (c) name, class etc. of the student may be written.
@@ -311,7 +311,7 @@ line.Fig 19 shows extension lines.
 A thin, solid line used to indicate the feature with which a dimension, note, or
 symbol is associated. Generally this is a straight line drawn at an angle that
 is neither horizontal nor vertical. Leader line is terminated with an arrow
-touching the part or detail as shown in Figure 2. On the end opposite the arrow, the leader line will
+touching the part or detail as shown in Figure 19. On the end opposite the arrow, the leader line will
 have a short, horizontal shoulder. Text is extended from this shoulder such that
 the text height is centered with the shoulder line
 
