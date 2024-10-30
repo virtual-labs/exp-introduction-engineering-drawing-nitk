@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The ratio of height to length of an arrow in dimensioning is?",
+      "answers": {
+        "a": "1:2",
+        "b": "1:3",
+        "c": "1:4",
+        "d": "1:5"
+      },
+      "explanations": {
+        "a": "The right answer is (b). A 1:2 ratio would make the arrow shorter which might be preferred in diagrams where space is limited or where the arrows could potentially overlap with other elements if they were longer. ",
+        "b": "Correct. The right answer is (b). The ratio of height to length of an arrow is 1:3 to ensure clear visibility and maintaining consistency and aesthetic appeal.Arrows are uniform in size and style, regardless of the size of the drawing.",
+        "c": "The right answer is (b). A 1:4 ratio would result in a longer arrow compared to a 1:3 ratio. While this might make the arrow more noticeable, it could also potentially lead to clutter, especially in complex diagrams with many elements or in diagrams where space is limited.",
+        "d": "The right answer is (b). A 1:5 ratio might make the arrow more noticeable, it could also potentially lead to clutter, especially in complex diagrams with many elements or in diagrams where space is limited."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Dimensioning doesn't represent",
+      "answers": {
+        "a": "Height",
+        "b": "Length",
+        "c": "Depth",
+        "d": "material"
+      },
+      "explanations": {
+        "a": "The right answer is (d). Dimensioning provides essential geometric details like height, length and depth, not material",
+        "b": "The right answer is (d). Dimensioning provides essential geometric details like height, length and depth, not material",
+        "c": "The right answer is (d). Dimensioning provides essential geometric details like height, length and depth, not material",
+        "d": "Correct,The right answer is (d).  while dimensioning provides essential geometric details, material information is conveyed through separate annotations, symbols, or notes."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " An outline or a centerline should be used as a dimension line.      ",
+      "answers": {
+        "a": "true",
+        "b": "false",
+        "c": "Cannot be said",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The right answer is (b). The outline line is used to represent the surface boundaries of object. Dimension lines are used to indicate the dimension, while the centreline is used to represent the centre of circular feature.",
+        "b": "Correct, The right answer is (b). The outline line is used to represent the surface boundaries of object. Dimension lines are used to indicate the dimension, while the centreline is used to represent the centre of circular feature.",
+        "c": "The right answer is (b). The outline line is used to represent the surface boundaries of object. Dimension lines are used to indicate the dimension, while the centreline is used to represent the centre of circular feature.",
+        "d": "The right answer is (b). The outline line is used to represent the surface boundaries of object. Dimension lines are used to indicate the dimension, while the centreline is used to represent the centre of circular feature."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": " The advised position of placement of dimensions should be______",
+      "answers": {
+        "a": "Inside the view",
+        "b": "Outside the view",
+        "c": "On the boundaries of the view",
+        "d": "Cutting the view"
+      },
+      "explanations": {
+        "a": "The right answer is (b). When dimensions are placed inside the view, it might be unclear which feature they refer to. Internal dimensions provide space for tolerance values (e.g., ±0.1 mm) and fit information",
+        "b": "Correct, The right answer is (b). The dimension should be placed outside the view to improve the clarity, avoid ambiguity and maintain consistency and standardization.",
+        "c": "The right answer is (b). If dimensions were placed directly on the boundary, they might overlap with other lines or features, making the drawing confusing..",
+        "d": "The right answer is (b). When dimensions intersect or “cut” through the view in a technical drawing, it can lead to confusion and misinterpretation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+     "question": " If an angle of 60deg is bisected, what will be the angle made by the bisected line to original lines.",
+     "answers": {
+       "a": "30deg",
+       "b": "40deg",
+       "c": "60deg",
+       "d": "120deg"
+      },
+      "explanations": {
+        "a": "Correct, The right answer is 30 deg. If an angle of 60deg is bisected,then the angle made by the bisected line to original lines is half of 60 deg which is 30 deg.",
+        "b": "The right answer is 30 deg. If an angle of 60deg is bisected,then the angle made by the bisected line to original lines is half of 60 deg. 40 deg is not half of 60 deg",
+        "c": "The right answer is 30 deg. The 60 deg angle cannot bisects the 60 deg angle itself.",
+        "d": "The right answer is 30 deg. The 120 deg angle exceeds the 60 deg and cannot cut this angle."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}
