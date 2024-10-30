@@ -5,8 +5,9 @@
 Engineering Graphics is a technical way of communicating between engineers and designers. It shows physical representation of an object on a sheet of paper (A5, A4, A3, A2, A1 and A0) with detailed dimensions and properties which will lead to a finished product.
 
 The drawing instuments required for a perfect technical drawings are listed below:
+
 1. Drawing Board
-<br>A drawing board is a wooden board where the paper is fixed upon, which is a convinient way to draw. A drawing board is shown in Fig 1. It comes in different sizes such as B0, B1, B2 and B3
+   <br>A drawing board is a wooden board where the paper is fixed upon, which is a convinient way to draw. A drawing board is shown in Fig 1. It comes in different sizes such as B0, B1, B2 and B3
 
 <center>
 
@@ -28,7 +29,7 @@ Fig 2. T-square
 </center>
 
 <br>3. Set squares - 45<sup>o</sup> and 30<sup>o</sup> - 60<sup>o</sup>
-A set square as shown in Fig 3, is used to darw vertical lines by taking the horizontal lines drawn by T-square as the reference. Set squares along with a scale can be used to draw parallel lines. 
+A set square as shown in Fig 3, is used to darw vertical lines by taking the horizontal lines drawn by T-square as the reference. Set squares along with a scale can be used to draw parallel lines.
 
 <center>
 
@@ -39,69 +40,69 @@ Fig 3. Set-Square
 </center>
 
 4. Drawing Instrument box containing:
-     <br>i. Large-size compass with interchangable pencils and pens
-     <br>Compasses as shown in Fig 4, are used in drawing circles and arcs of circles.
+   <br>i. Large-size compass with interchangable pencils and pens
+   <br>Compasses as shown in Fig 4, are used in drawing circles and arcs of circles.
 
-     <center>
+    <center>
 
-     ![](images/4i.png)
-     
-     Fig 4. Large-size compass
+   ![](images/4i.png)
 
-     </center>
-     
-     <br>ii. Lengthening bar
-     <br> Circles measuring more than 150mm are drawn using a lengthening bar as shown in Fig 5.
+   Fig 4. Large-size compass
 
-     <center>
+    </center>
+    
+    <br>ii. Lengthening bar
+    <br> Circles measuring more than 150mm are drawn using a lengthening bar as shown in Fig 5.
 
-    ![](images/4ii.png)
+    <center>
 
-     Fig 5. Lengthening Bar
+   ![](images/4ii.png)
 
-     </center>
+   Fig 5. Lengthening Bar
 
-     <br>iii. Small bow compass
-     <br> Circles and arcs measuring less than 25mm radius are drawn using a smll bow compass as shown in Fig 6. 
+    </center>
 
-     <center>
-     
-     ![](images/4iii.png)
-     
-     Fig 6. Small bow compass
+   <br>iii. Small bow compass
+   <br> Circles and arcs measuring less than 25mm radius are drawn using a smll bow compass as shown in Fig 6.
 
-     </center> 
+    <center>
+    
+    ![](images/4iii.png)
+    
+    Fig 6. Small bow compass
 
-     <br>iv. Large size divider
-     <br> Dividers as shown in Fig 7, with needle attachments, are used to divide lines and arcs into equal parts, transfer dimensions and to set off given distances from the scale to the drawing 
+    </center>
 
-     <center>
+   <br>iv. Large size divider
+   <br> Dividers as shown in Fig 7, with needle attachments, are used to divide lines and arcs into equal parts, transfer dimensions and to set off given distances from the scale to the drawing
 
-     ![](images/4iv.png)
-     
-     Fig 7. Large Size divider
+    <center>
 
-     </center>
+   ![](images/4iv.png)
 
-     <br>v. Small bow divider
-     <br>A small bow divider is used to make minue divisions
+   Fig 7. Large Size divider
 
-     <br>vi. Small-bow ink pen
-     It is used for drawing smal cicles and arcs in ink.
-     
-     <br>vii. Inking Pen
-     An inking pen as shown in Fig 8, is used to draw srtaigh lines and non circular arc in ink
+    </center>
 
-     <center>
-     
-     ![](images/5.png)
+   <br>v. Small bow divider
+   <br>A small bow divider is used to make minue divisions
 
-     Fig 8. Inkng Pen
+   <br>vi. Small-bow ink pen
+   It is used for drawing smal cicles and arcs in ink.
 
-     </center>
+   <br>vii. Inking Pen
+   An inking pen as shown in Fig 8, is used to draw srtaigh lines and non circular arc in ink
+
+    <center>
+    
+    ![](images/5.png)
+
+   Fig 8. Inkng Pen
+
+    </center>
 
 <br>5. Scales
-<br>Scales as shown in Fig 9, helps in taking measurements accurately. 
+<br>Scales as shown in Fig 9, helps in taking measurements accurately.
 
 <center>
 
@@ -198,17 +199,18 @@ Fig 16. Roll-n-Draw
 </center>
 
 Instructions to draw border lines:
-1. Mark points along the left-hand edge of the paper at required  distances from the top and  bottom edges and through them, draw horizontal lines with the  T-square or by mini-drafter.
 
-2. Along the upper horizontal line,  mark two points at required distances from the left-hand and 
-right-hand edges, and draw vertical lines through them by mini-drafter.
+1. Mark points along the left-hand edge of the paper at required distances from the top and bottom edges and through them, draw horizontal lines with the T-square or by mini-drafter.
+
+2. Along the upper horizontal line, mark two points at required distances from the left-hand and
+   right-hand edges, and draw vertical lines through them by mini-drafter.
 
 3. Erase the extra lengths of lines beyond the points of intersection.
 
-4. One more horizontal line at about 10 mm to 20 mm from the bottom  border line may also be drawn and the space divided into three blocks. A  title block as shown in Fig 17 must be drawn in right-hand bottom corner  above block-3; in which 
-(a) name of the institution, 
-(b) title of the drawing, and 
-(c) name, class etc. of the student may be written.
+4. One more horizontal line at about 10 mm to 20 mm from the bottom border line may also be drawn and the space divided into three blocks. A title block as shown in Fig 17 must be drawn in right-hand bottom corner above block-3; in which
+   (a) name of the institution,
+   (b) title of the drawing, and
+   (c) name, class etc. of the student may be written.
 
 <center>
 
@@ -273,13 +275,11 @@ standard conventions mentioned in BIS (SP46:2003). A line may be curved,
 straight, continuous, segmented. It may be drawn as thin or thick. A few basic
 types of lines widely used in drawings are shown in Table 1.
 
-<center> Table 1. Types of lines and their application </center> 
-
+<center> Table 1. Types of lines and their application </center>
 
 <center>
 
 ![](images/fig1.png)
-
 
 </center>
 
@@ -296,9 +296,6 @@ shapes as shown in Fig 18, and defining the position of object in space.
 Fig 18. Different types of Geometric Figures
 
 </center>
-
-
-
 
 The important elements of dimensioning consists of extension lines, leader line,
 arrows and dimensions.
@@ -319,29 +316,24 @@ the text height is centered with the shoulder line
 
 ![](images/fig3.png)
 
-Fig 19. Extension lines
+Fig 19. Leader Line and Extension Line
 
 </center>
 
-
-
-
--   Arrows should be 1/3rd as wide as they are long - symbols
-    placed at the end of dimension lines to show the limits of the dimension.
-    Arrows are uniform in size and style, regardless of the size of the drawing.
-    Various types of arrows used for dimensioning is shown in Fig 20.
+- Arrows should be 1/3rd as wide as they are long - symbols
+  placed at the end of dimension lines to show the limits of the dimension.
+  Arrows are uniform in size and style, regardless of the size of the drawing.
+  Various types of arrows used for dimensioning is shown in Fig 20.
 
 <center>
 
 ![](images/fig4.png)
 
-Fig 20. Types of arrows used for dimensioning 
+Fig 20. Types of arrows used for dimensioning
 
 </center>
 
-
-
-**Dimensioning of angles:** 
+**Dimensioning of angles:**
 The normal convention for dimensioning of angles are
 illustrated in Fig 21.
 
@@ -349,14 +341,10 @@ illustrated in Fig 21.
 
 ![](images/fig5.png)
 
-Figure 21. Representation of Angles   
+Figure 21. Representation of Angles
 
 source: https://nptel.ac.in/courses/112/103/112103019/
 
-
 </center>
-
-
-
 
 </div>
