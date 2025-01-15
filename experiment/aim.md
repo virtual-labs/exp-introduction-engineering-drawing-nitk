@@ -1,1 +1,1 @@
-### Aim of the experiment
+To bisect a line, bisect an angle and construct a polygon.
