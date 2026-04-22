@@ -1,0 +1,1 @@
+To bisect a line, bisect an angle and construct a polygon.
